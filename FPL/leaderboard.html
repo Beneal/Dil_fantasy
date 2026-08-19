@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard — Dil Fantasy</title>
+<meta name="description" content="Live Dil Fantasy standings built from official Fantasy Premier League scoring.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="leaderboard">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="leaderboard.html" aria-current="page">Leaderboard</a>
+      </nav>
+      <h1>Leaderboard</h1>
+      <p>Standings come straight from official Fantasy Premier League scoring. Your rank updates as gameweek
+      points are published.</p>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="shell" data-tabgroup>
+      <div class="tabs" id="lb-tabs" role="tablist" aria-label="Leaderboard scope">
+        <button class="tab" type="button" role="tab" data-tab="gameweek" aria-selected="true">This gameweek</button>
+        <button class="tab" type="button" role="tab" data-tab="tournament" aria-selected="false">This tournament</button>
+        <button class="tab" type="button" role="tab" data-tab="overall" aria-selected="false">Overall</button>
+        <button class="tab" type="button" role="tab" data-tab="previous" aria-selected="false">Previous gameweek</button>
+      </div>
+
+      <div class="lb-stats" id="lb-stats" aria-live="polite"></div>
+
+      <div class="podium" id="podium"></div>
+      <div class="your-rank-strip" id="your-rank"></div>
+
+      <div class="filter-bar">
+        <div class="search-field">
+          <span data-icon="search" data-icon-size="17"></span>
+          <label class="visually-hidden" for="lb-search">Search managers</label>
+          <input id="lb-search" type="search" placeholder="Search by manager or FPL team">
+        </div>
+        <div>
+          <label class="visually-hidden" for="lb-sort">Sort standings</label>
+          <select id="lb-sort">
+            <option value="rank">Sort by rank</option>
+            <option value="total">Sort by total points</option>
+            <option value="movement">Sort by rank movement</option>
+          </select>
+        </div>
+        <span id="lb-source"></span>
+      </div>
+
+      <div class="table-wrap" id="lb-mount" aria-live="polite"></div>
+
+      <div class="notice" style="margin-top:20px">
+        <span data-icon="lock" data-icon-size="18"></span>
+        <div>The public directory shows manager names, FPL team names and points only. Email addresses, phone
+        numbers, ages and any payment or reward details are never published.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

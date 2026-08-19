@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile — Dil Fantasy</title>
+<meta name="description" content="Your Dil Fantasy profile: personal information, connected FPL account, reward details and tournament history.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+  <section class="page-head">
+    <div class="shell">
+      <div class="row" style="gap:20px">
+        <span class="avatar avatar--lg" id="profile-avatar" aria-hidden="true"></span>
+        <div>
+          <h1 id="profile-name" style="font-size:clamp(1.7rem,3.6vw,2.4rem)">Profile</h1>
+          <p id="profile-team" style="margin-top:6px"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="shell">
+      <div class="grid grid-2" style="align-items:start">
+
+        <div class="stack-24">
+          <div class="card card--pad">
+            <h3 style="margin-bottom:14px">Personal information</h3>
+            <div class="info-list" id="personal-info"></div>
+            <p class="hint" style="margin-top:12px;color:var(--text-faint);font-size:.82rem">
+              Contact details are private and are used only for account and payout matters.</p>
+          </div>
+
+          <div class="card card--pad" id="fpl">
+            <h3 style="margin-bottom:14px">FPL account</h3>
+            <div id="fpl-info"></div>
+          </div>
+
+          <div class="card card--pad">
+            <h3 style="margin-bottom:14px">Reward information</h3>
+            <div class="info-list" id="reward-info"></div>
+            <div class="notice notice--purple" style="margin-top:14px">
+              <span data-icon="lock" data-icon-size="18"></span>
+              <div>Account numbers are masked everywhere in the interface and are never published.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-24">
+          <div class="card card--pad" id="history">
+            <h3 style="margin-bottom:6px">Tournament history</h3>
+            <p class="text-soft" style="font-size:.88rem;margin-bottom:10px">Every entry and its verification status.</p>
+            <div class="timeline" id="tournament-history"></div>
+          </div>
+
+          <div class="card card--pad" id="settings">
+            <h3 style="margin-bottom:14px">Security</h3>
+            <div class="info-list" style="margin-bottom:16px">
+              <div><span class="k">Password</span><span class="v masked">••••••••</span></div>
+              <div><span class="k">Two-factor</span><span class="v">Not available yet</span></div>
+            </div>
+            <div class="stack-8">
+              <button class="btn btn--ghost btn--block" type="button" id="logout-all">Log out</button>
+            </div>
+            <p class="hint" style="margin-top:12px;color:var(--text-faint);font-size:.82rem">
+              Password changes and two-factor sign-in arrive with the account service.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
