@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournament — Dil Fantasy</title>
+<meta name="description" content="Gameweek tournament details, standings, your performance and the rules that apply.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tournament">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="tournaments.html">Tournaments</a><span>/</span>
+        <span style="color:rgba(255,255,255,.6);font-size:.85rem">Details</span>
+      </nav>
+      <div class="row-between" style="align-items:flex-end">
+        <div>
+          <h1 id="td-title">Gameweek tournament</h1>
+          <p class="row" id="td-status" style="gap:8px;margin-top:12px"></p>
+        </div>
+        <div id="td-cta"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="shell">
+      <div class="dash-grid" style="margin-bottom:28px" id="td-clock-wrap">
+        <div class="card card--pad">
+          <p class="mono-label">Tournament facts</p>
+          <div class="info-list" id="td-facts" style="margin-top:14px"></div>
+        </div>
+        <aside class="clock-card" data-clock>
+          <div class="clock-head">
+            <p class="eyebrow"><span class="status-dot" data-clock-dot></span> <span data-clock-caption>Registration closes in</span></p>
+            <span class="badge badge--green-soft" data-clock-status></span>
+          </div>
+          <p class="clock-gw" data-clock-gameweek></p>
+          <div class="clockface" style="margin-top:18px">
+            <div class="clock-unit"><span class="val"><span data-clock-days>00</span><sup>D</sup></span><span class="lbl">Days</span></div>
+            <span class="clock-sep" aria-hidden="true">:</span>
+            <div class="clock-unit"><span class="val"><span data-clock-hours>00</span><sup>H</sup></span><span class="lbl">Hours</span></div>
+            <span class="clock-sep" aria-hidden="true">:</span>
+            <div class="clock-unit"><span class="val"><span data-clock-minutes>00</span><sup>M</sup></span><span class="lbl">Minutes</span></div>
+            <span class="clock-sep" aria-hidden="true">:</span>
+            <div class="clock-unit"><span class="val"><span data-clock-seconds>00</span><sup>S</sup></span><span class="lbl">Seconds</span></div>
+          </div>
+          <div class="clock-rail"><span data-clock-rail></span></div>
+          <p class="clock-note" data-clock-note></p>
+          <p class="clock-deadline" data-clock-deadline></p>
+        </aside>
+      </div>
+
+      <div data-tabgroup>
+        <div class="tabs" id="td-tabs" role="tablist" aria-label="Tournament sections">
+          <button class="tab" type="button" role="tab" data-tab="overview" aria-selected="true">Overview</button>
+          <button class="tab" type="button" role="tab" data-tab="leaderboard" aria-selected="false">Leaderboard</button>
+          <button class="tab" type="button" role="tab" data-tab="performance" aria-selected="false">My performance</button>
+          <button class="tab" type="button" role="tab" data-tab="rules" aria-selected="false">Rules</button>
+        </div>
+
+        <div data-tab-panel="overview" role="tabpanel" aria-label="Overview">
+          <div class="grid grid-2">
+            <div class="card card--pad">
+              <h3>How this tournament is scored</h3>
+              <p class="text-soft" style="margin-top:10px">Every entered manager is ranked by the points their
+              official Fantasy Premier League squad scores in this gameweek. Dil Fantasy does not change, adjust
+              or re-weight FPL scoring — it reads it.</p>
+              <p class="text-soft">Ties are broken by total season points, then by overall FPL rank.</p>
+            </div>
+            <div class="card card--pad">
+              <h3>Entering</h3>
+              <p class="text-soft" style="margin-top:10px">Pay the 200 Birr entry fee through your own payment
+              provider, then send the screenshot to the official Dil Fantasy Telegram group with your name
+              and Manager ID. An administrator verifies it before your entry is confirmed.</p>
+              <a class="btn btn--ghost btn--sm" data-telegram-link href="#" target="_blank" rel="noopener noreferrer"
+                 style="margin:16px 0 12px"><span data-icon="telegram" data-icon-size="15"></span>
+                 Open the Telegram group</a>
+              <a class="link-more" href="how-it-works.html#proof">See the full payment walkthrough →</a>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="leaderboard" role="tabpanel" aria-label="Leaderboard" hidden>
+          <div class="table-wrap" id="td-leaderboard"></div>
+        </div>
+
+        <div data-tab-panel="performance" role="tabpanel" aria-label="My performance" hidden>
+          <div id="td-performance"></div>
+        </div>
+
+        <div data-tab-panel="rules" role="tabpanel" aria-label="Rules" hidden>
+          <div class="card card--pad">
+            <ul class="stack-16">
+              <li>The entry fee is 200 Birr and is non-refundable.</li>
+              <li>Participants must supply a valid FPL Manager ID.</li>
+              <li>Rankings are based on official Fantasy Premier League data.</li>
+              <li>Registration opens Sunday at 12:00 AM EAT and closes Friday at 2:00 PM EAT.</li>
+              <li>Applications cannot be submitted after the deadline.</li>
+              <li>Fraudulent or duplicate accounts may be disqualified.</li>
+            </ul>
+            <a class="btn btn--ghost" style="margin-top:20px" href="rules.html">Read all rules</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

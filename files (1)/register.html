@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create your account — Dil Fantasy</title>
+<meta name="description" content="Create a Dil Fantasy account, set up your reward details and connect your Fantasy Premier League Manager ID.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<div class="auth-shell">
+
+  <div class="auth-main">
+    <div class="auth-inner">
+
+      <div id="register-flow">
+        <div class="stepper" aria-label="Registration progress">
+          <div class="stepper-item" data-step="1" data-state="current">
+            <span class="no">01</span><span class="txt">Personal information</span>
+          </div>
+          <span class="stepper-line"></span>
+          <div class="stepper-item" data-step="2" data-state="todo">
+            <span class="no">02</span><span class="txt">Reward information</span>
+          </div>
+          <span class="stepper-line"></span>
+          <div class="stepper-item" data-step="3" data-state="todo">
+            <span class="no">03</span><span class="txt">Connect FPL</span>
+          </div>
+        </div>
+
+        <!-- ===================== STEP 1 ===================== -->
+        <section data-step-panel="1" aria-label="Personal information">
+          <h1 style="font-size:clamp(1.6rem,3.4vw,2.1rem);margin-bottom:8px">Create your Dil Fantasy account</h1>
+          <p class="text-soft" style="margin-bottom:28px">You need to be 18 or older to enter a tournament.</p>
+
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input id="fullName" type="text" autocomplete="name" placeholder="As it appears on your payment account">
+            <p class="error-text"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="age">Age</label>
+              <input id="age" type="number" min="18" max="100" inputmode="numeric" placeholder="18">
+              <p class="error-text"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" autocomplete="tel" placeholder="+251 9XX XXX XXX">
+              <p class="error-text"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+            <p class="error-text"></p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw-wrap">
+              <input id="password" type="password" autocomplete="new-password" placeholder="At least 8 characters">
+              <button class="pw-toggle" type="button" aria-label="Show password"></button>
+            </div>
+            <div class="pw-meter" id="pw-meter" data-score="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="hint">Mix letters and numbers. Longer is stronger.</p>
+            <p class="error-text"></p>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="pw-wrap">
+              <input id="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password">
+              <button class="pw-toggle" type="button" aria-label="Show password"></button>
+            </div>
+            <p class="error-text"></p>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--block" type="button" id="step1-next">Continue</button>
+          </div>
+          <p class="text-soft" style="font-size:.88rem;margin-top:18px;text-align:center">
+            Already have an account? <a class="link-more" href="login.html">Log in</a>
+          </p>
+        </section>
+
+        <!-- ===================== STEP 2 ===================== -->
+        <section data-step-panel="2" aria-label="Reward information" hidden>
+          <h1 style="font-size:clamp(1.6rem,3.4vw,2.1rem);margin-bottom:8px">Set up your reward account</h1>
+          <p class="text-soft" style="margin-bottom:24px">Your reward information is used only to process
+          tournament winnings.</p>
+
+          <p class="field-label">Where should winnings be sent?</p>
+          <div class="choice-grid">
+            <button class="choice" type="button" data-method="telebirr" aria-pressed="true">
+              <strong>Telebirr</strong><span>Mobile money</span>
+            </button>
+            <button class="choice" type="button" data-method="cbe" aria-pressed="false">
+              <strong>CBE</strong><span>Commercial Bank of Ethiopia</span>
+            </button>
+            <button class="choice" type="button" data-method="bank" aria-pressed="false">
+              <strong>Other bank</strong><span>Any Ethiopian bank</span>
+            </button>
+          </div>
+
+          <div data-method-panel="telebirr">
+            <div class="field">
+              <label for="telebirrAccount">Telebirr phone number / account number</label>
+              <input id="telebirrAccount" type="tel" placeholder="+251 9XX XXX XXX">
+              <p class="error-text"></p>
+            </div>
+          </div>
+
+          <div data-method-panel="cbe" hidden>
+            <div class="field">
+              <label for="cbeAccount">CBE account number</label>
+              <input id="cbeAccount" type="text" inputmode="numeric" placeholder="1000XXXXXXXXX">
+              <p class="error-text"></p>
+            </div>
+          </div>
+
+          <div data-method-panel="bank" hidden>
+            <div class="field">
+              <label for="bankName">Bank name</label>
+              <select id="bankName"></select>
+              <p class="error-text"></p>
+            </div>
+            <div class="field">
+              <label for="bankAccount">Account number</label>
+              <input id="bankAccount" type="text" inputmode="numeric" placeholder="Your account number">
+              <p class="error-text"></p>
+            </div>
+            <div class="field">
+              <label for="accountHolder">Account holder name</label>
+              <input id="accountHolder" type="text" placeholder="Name on the account">
+              <p class="error-text"></p>
+            </div>
+          </div>
+
+          <div class="notice notice--purple">
+            <span data-icon="lock" data-icon-size="18"></span>
+            <div>Your reward information is private. It is never shown on the leaderboard, the participant
+            directory or anywhere else on the site.</div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--ghost" type="button" id="step2-back">Back</button>
+            <button class="btn" type="button" id="step2-next">Continue</button>
+          </div>
+        </section>
+
+        <!-- ===================== STEP 3 ===================== -->
+        <section data-step-panel="3" aria-label="Connect FPL" hidden>
+          <h1 style="font-size:clamp(1.6rem,3.4vw,2.1rem);margin-bottom:8px">Connect your Fantasy Premier League account</h1>
+          <p class="text-soft" style="margin-bottom:24px">Connect your FPL Manager ID so Dil Fantasy can retrieve
+          your official Fantasy Premier League performance data.</p>
+
+          <div class="field">
+            <label for="managerId">FPL Manager ID</label>
+            <input id="managerId" type="text" inputmode="numeric" placeholder="Enter your FPL Manager ID">
+            <p class="error-text"></p>
+            <p class="hint"><a href="#" id="fpl-help" class="link-more" style="font-size:.82rem">Where can I find my FPL Manager ID?</a></p>
+          </div>
+
+          <button class="btn btn--block" type="button" id="connect-fpl">Connect FPL account</button>
+
+          <div id="fpl-result" style="margin-top:20px" aria-live="polite"></div>
+
+          <div class="notice" style="margin-top:20px">
+            <span data-icon="refresh" data-icon-size="18"></span>
+            <div>Dil Fantasy reads public performance data only. It never changes your FPL team and never asks
+            for your FPL password.</div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--ghost" type="button" id="step3-back">Back</button>
+            <button class="btn" type="button" id="finish-register" disabled>Create account</button>
+          </div>
+        </section>
+      </div>
+
+      <div id="register-welcome" hidden></div>
+    </div>
+  </div>
+
+  <aside class="auth-aside">
+    <p class="eyebrow" style="color:var(--green-400)">Why managers join</p>
+    <h2 style="font-size:1.9rem;margin:12px 0 24px">One squad. One country. One leaderboard every week.</h2>
+    <div class="aside-point">
+      <span class="k">01</span>
+      <div><strong>Your real FPL team counts</strong>
+        <p>No second squad to manage. The points you already score decide your rank.</p></div>
+    </div>
+    <div class="aside-point">
+      <span class="k">02</span>
+      <div><strong>A fresh tournament every Sunday</strong>
+        <p>Registration opens at 12:00 AM and closes Friday at 2:00 PM, Ethiopia time.</p></div>
+    </div>
+    <div class="aside-point">
+      <span class="k">03</span>
+      <div><strong>Rewards you can trace</strong>
+        <p>Every payout is listed against a gameweek, a rank and a date.</p></div>
+    </div>
+    <div class="aside-point">
+      <span class="k">04</span>
+      <div><strong>Your details stay yours</strong>
+        <p>Phone, email and reward accounts are never published.</p></div>
+    </div>
+  </aside>
+
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournaments — Dil Fantasy</title>
+<meta name="description" content="Weekly Dil Fantasy gameweek tournaments. Registration opens Sunday at 12:00 AM and closes Friday at 2:00 PM Ethiopia time.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tournaments">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="tournaments.html" aria-current="page">Tournaments</a>
+      </nav>
+      <h1>Tournaments</h1>
+      <p>One tournament per gameweek. Registration opens every Sunday at 12:00 AM and closes every Friday at
+      2:00 PM, Ethiopia time. Entry is 200 Birr and non-refundable.</p>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="shell" data-tabgroup>
+      <div class="tabs" id="tournament-tabs" role="tablist" aria-label="Tournament status">
+        <button class="tab" type="button" role="tab" data-tab="upcoming" aria-selected="true">Upcoming (<span data-count="upcoming">0</span>)</button>
+        <button class="tab" type="button" role="tab" data-tab="active" aria-selected="false">Active (<span data-count="active">0</span>)</button>
+        <button class="tab" type="button" role="tab" data-tab="completed" aria-selected="false">Completed (<span data-count="completed">0</span>)</button>
+      </div>
+      <div class="grid grid-3" data-tab-panel="upcoming" data-bucket="upcoming" role="tabpanel" aria-label="Upcoming tournaments"></div>
+      <div class="grid grid-3" data-tab-panel="active" data-bucket="active" role="tabpanel" aria-label="Active tournaments" hidden></div>
+      <div class="grid grid-3" data-tab-panel="completed" data-bucket="completed" role="tabpanel" aria-label="Completed tournaments" hidden></div>
+
+      <div class="notice notice--purple" style="margin-top:28px">
+        <span data-icon="info" data-icon-size="18"></span>
+        <div>Buttons follow the clock. The moment Friday 2:00 PM EAT passes, every apply and join control on the
+        site disables itself, and the next gameweek opens automatically on Sunday at 12:00 AM EAT.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

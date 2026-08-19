@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Rising price chart with football">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12002B"/><stop offset="1" stop-color="#04331F"/>
+    </linearGradient>
+    <pattern id="p1" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <path d="M0 13h26" stroke="#ffffff" stroke-opacity=".07" stroke-width="7"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg1)"/>
+  <rect width="640" height="400" fill="url(#p1)"/>
+  <g opacity=".9"><path d="M90 300 L190 230 L260 262 L350 160 L440 200 L560 96" fill="none" stroke="#00FF87" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="560" cy="96" r="16" fill="#00FF87"/><g opacity=".5"><path d="M90 340h470" stroke="#fff" stroke-opacity=".25" stroke-width="3"/></g><g transform="translate(120,96)"><circle r="42" fill="#fff" opacity=".92"/><path d="M0-42 12-14l30 4-22 22 6 30L0 28l-26 14 6-30-22-22 30-4z" fill="#12002B" opacity=".55"/></g></g>
+  <circle cx="548" cy="66" r="88" fill="#ffffff" opacity=".05"/>
+</svg>

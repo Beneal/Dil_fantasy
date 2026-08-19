@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <radialGradient id="beam" cx=".5" cy="0" r=".8">
+      <stop offset="0" stop-color="#D4A5DC" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#D4A5DC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="turf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#052E1E" stop-opacity=".0"/>
+      <stop offset="1" stop-color="#00874A" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="tier" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#37003C" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1A011E" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <g opacity=".9">
+    <ellipse cx="220" cy="-40" rx="300" ry="250" fill="url(#beam)"/>
+    <ellipse cx="720" cy="-70" rx="360" ry="280" fill="url(#beam)"/>
+    <ellipse cx="1240" cy="-40" rx="300" ry="250" fill="url(#beam)"/>
+  </g>
+  <path d="M0 250c240-70 480-104 720-104s480 34 720 104v90H0Z" fill="url(#tier)"/>
+  <g fill="#5B0D66" opacity=".35">
+    <g id="crowd"></g>
+  </g>
+  <g opacity=".55">
+    <path d="M0 340h1440v380H0z" fill="url(#turf)"/>
+    <g stroke="#00FF87" stroke-opacity=".28" fill="none" stroke-width="2">
+      <path d="M-200 700 720 400l920 300"/>
+      <path d="M120 720 720 470l600 250"/>
+      <ellipse cx="720" cy="560" rx="230" ry="70"/>
+      <path d="M720 400v320"/>
+    </g>
+  </g>
+  <g fill="#00FF87" opacity=".18">
+    <circle cx="180" cy="392" r="2"/><circle cx="420" cy="368" r="2"/><circle cx="980" cy="372" r="2"/><circle cx="1260" cy="396" r="2"/>
+  </g>
+</svg>

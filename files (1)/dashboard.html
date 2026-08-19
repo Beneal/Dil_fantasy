@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Dil Fantasy</title>
+<meta name="description" content="Your Dil Fantasy dashboard: current rank, gameweek points, tournament entries and rewards.">
+<meta name="theme-color" content="#0D1017">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+  <section class="page-head">
+    <div class="shell">
+      <h1 id="dash-greeting">Welcome back</h1>
+      <p id="dash-sub"></p>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="shell">
+      <div class="stat-row" id="dash-stats"></div>
+
+      <div class="dash-grid">
+        <div class="stack-24">
+          <div class="card chart-card">
+            <header>
+              <div>
+                <h3>Points progression</h3>
+                <p class="sub">Your points in each Dil Fantasy gameweek you have played, from Gameweek 1 onward.</p>
+              </div>
+              <span id="dash-chart-source"></span>
+            </header>
+            <div id="dash-chart"></div>
+          </div>
+
+          <div class="card card--pad">
+            <div class="row-between" style="margin-bottom:8px">
+              <h3>Recent entries</h3>
+              <a class="link-more" href="profile.html#history">Full history →</a>
+            </div>
+            <div class="timeline" id="dash-entries"></div>
+          </div>
+
+          <div class="card card--pad">
+            <div class="row-between" style="margin-bottom:16px">
+              <h3>Leaderboard snapshot</h3>
+              <a class="link-more" href="leaderboard.html">Full leaderboard →</a>
+            </div>
+            <div class="table-wrap" id="dash-leaderboard"></div>
+          </div>
+        </div>
+
+        <div class="stack-24">
+          <div class="clock-card" data-clock id="dash-tournament"></div>
+
+          <div class="card card--pad">
+            <h3 style="margin-bottom:12px">Quick links</h3>
+            <div class="stack-8">
+              <a class="btn btn--ghost btn--block" href="performance.html">My performance</a>
+              <a class="btn btn--ghost btn--block" href="rewards.html">Rewards</a>
+              <a class="btn btn--ghost btn--block" href="profile.html">Profile &amp; FPL account</a>
+              <a class="btn btn--ghost btn--block" href="rules.html">Tournament rules</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="api-client.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
